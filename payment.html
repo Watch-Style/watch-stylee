@@ -8,77 +8,28 @@
   <script src="https://bitpay.com/cdn/bitpay.js"></script>
 </head>
 <body>
-  <h1>Mon Site Web avec BitPay</h1>
+  <h1>Effectuez votre paiement</h1>
   
-  <!-- Formulaire de paiement -->
-  <form id="payment-form">
-    <!-- Ajoutez les champs nécessaires pour les détails du paiement -->
-    <label for="amount">Amount:</label>
-    <input type="text" id="amount" name="amount" required>
-
-    <!-- Bouton de paiement -->
-    <button type="button" onclick="initierPaiement()">Orders</button>
+  <div class="container">
+  <form >
+    <p>Bienvenue</p>
+        <input type="name" placeholder="First Name"><br>
+        <input type="name" placeholder="Name"><br>
+        <input type="Number" placeholder="Number"><br>
+    <input type="email" placeholder="Email"><br>
+    <input type="name" placeholder="Countries"><br>
+    <input type="text" placeholder="City"><br>
+    <input type="text" placeholder="Adresse Location"><br>
+   <a> <input type="button" value="Connexion"></a><br>
+  
   </form>
-<!-- 
-  <script>
-    // Fonction pour initier le paiement
-    function initierPaiement() {
-         const options = {
-            method: 'POST',
-            headers: {
-            accept: 'application/json',
-                     'Content-Type': 'application/json',
-                     'X-Accept-Version': '2.0.0'
-  },
-  body: JSON.stringify({facade: 'pos', id: 'payment-form', label: 'amount'})
-};
 
-fetch('https://test.bitpay.com/tokens', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
-      // Utiliser la bibliothèque JavaScript de BitPay pour initier le paiement
-      // Assurez-vous de passer les détails du paiement et les clés API nécessaires
-      BitPay.onModalWillEnter(() => {
-        // Logique à exécuter avant l'affichage du modal de paiement
-        const options = {
-                method: 'GET',
-                headers: {
-                accept: 'application/json',
-                        'Content-Type': 'application/json',
-                        'X-Accept-Version': '2.0.0',
-                        'X-Identity': '000000'
-  }
-};
+  <div class="drop drop-1"></div>
+  <div class="drop drop-2"></div>
+  <div class="drop drop-3"></div>
+  <div class="drop drop-4"></div>
+  <div class="drop drop-5"></div>
+</div>
 
-fetch('https://test.bitpay.com/tokens', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
-      });
-
-      BitPay.showInvoice('VOTRE_API_KEY', {
-        amount: document.getElementById('amount').value,
-        // Autres paramètres de paiement en fonction de la documentation BitPay
-      }, (invoice) => {
-            const options = {
-                 method: 'GET',
-                 headers: {
-                 accept: 'application/json',
-                         'Content-Type': 'application/json',
-                         'X-Accept-Version': '2.0.0',
-                         'X-Identity': '000000'
-  }
-};
-
-fetch('https://test.bitpay.com/tokens/bitcoin/sins', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
-        // Callback pour gérer la réponse de BitPay après le paiement
-        console.log(invoice);
-      });
-    }
-  </script> -->
 </body>
 </html>
